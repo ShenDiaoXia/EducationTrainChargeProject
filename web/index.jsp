@@ -11,6 +11,11 @@
     <title>项目架构测试</title>
   </head>
   <body>
-    <a href="LoginServlet">点我测试</a>
+   <form  action="${pageContext.request.contextPath}/loginingServlet"  method="post">
+   <input type="text"  name="username" >
+   <input  type="text" name="password">
+   <input  type="text"  name="type">
+   <input type="submit"  value="提交">  
+   </form>
   </body>
 </html>
