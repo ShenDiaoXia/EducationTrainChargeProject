@@ -9,7 +9,7 @@ public class I_FindLoginDaoImpl  implements I_FindLoginDao {
  //返回username对应的Login_id
 	@Override
 	public int findIdByUsername(String username) {
-          String sql="select id  from tb_login where username=?";
+          String sql="select login_id  from tb_login where username=?";
 		return Contant.jdbcTemplate.queryForObject(sql, Integer.class,username);
 	}
 //返回username对应的type
@@ -18,9 +18,9 @@ public class I_FindLoginDaoImpl  implements I_FindLoginDao {
 		String sql="select type from tb_login where  username=?";
 		return Contant.jdbcTemplate.queryForObject(sql, String.class,username);
 	}
-@Test
-public void test() {
-	System.out.println(findIdByUsername("1"));
-	System.out.println(findTypeByUsername("2"));
-}
+//@Test
+//public void test() {
+//	System.out.println(findIdByUsername("1"));
+//	System.out.println(findTypeByUsername("2"));
+//}
 }

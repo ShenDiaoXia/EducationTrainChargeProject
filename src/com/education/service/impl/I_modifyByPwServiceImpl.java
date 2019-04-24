@@ -1,7 +1,8 @@
-package com.education.dao.impl;
+package com.education.service.impl;
 
 import java.util.List;
 
+import com.education.dao.impl.I_modifyUserPasswordDaoImpl;
 import com.education.service.I_FindUserTypeByUsernameService;
 import com.education.service.I_modifyUserByPwService;
 

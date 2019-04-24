@@ -13,7 +13,7 @@ public class I_FindTeachertDaoImpl implements I_FindUserDao{
 
 	@Override
 	public List<Teacher> findUserById(int id) {
-          String   sql="select * from tb_teacher where login_id=?";
+          String   sql="select * from tb_teacher where tlogin_id=?";
           return   Contant.jdbcTemplate.query(sql,new BeanPropertyRowMapper<Teacher>(Teacher.class),id);
 	}
 //	@Test

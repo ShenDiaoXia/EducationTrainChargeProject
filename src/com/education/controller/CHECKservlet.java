@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 
 import javax.servlet.ServletException;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -12,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.education.entity.Admintor;
 import com.education.entity.Student;
 import com.education.entity.Teacher;
-import com.education.service.I_FindUserTypeByUnServiceImpl;
+import com.education.service.impl.I_FindUserTypeByUnServiceImpl;
 
 /**
  * Servlet implementation class CHECKservlet
@@ -47,7 +48,7 @@ public class CHECKservlet extends HttpServlet {
 		    	//获取对象类型和正确的密码和账号
 		    	if(list.get(0) instanceof Admintor) {
 		    		Admintor admintor=(Admintor) list.get(0);
-		    		request.getSession().setAttribute("id",admintor.getLogin_id());
+		    		request.getSession().setAttribute("id",admintor.getSlogin_id());
 		    		currentQuestion=admintor.getQuestion();
 		    		currentAnswer=admintor.getAnswer();
 		    		System.out.println(currentAnswer);
@@ -55,7 +56,7 @@ public class CHECKservlet extends HttpServlet {
 		    	}
 		    	else if(list.get(0) instanceof Teacher) {
 		    		Teacher teacher=(Teacher) list.get(0);
-		    		request.getSession().setAttribute("id",teacher.getLogin_id());
+		    		request.getSession().setAttribute("id",teacher.getTlogin_id());
 		    		currentQuestion=teacher.getQuestion();
 		    		currentAnswer=teacher.getAnswer();
 		    		System.out.println(currentAnswer);
@@ -63,7 +64,7 @@ public class CHECKservlet extends HttpServlet {
 		    	}
 		    	else if(list.get(0) instanceof Student) {
 		    		Student student=(Student) list.get(0);
-		    		request.getSession().setAttribute("id", student.getLogin_id());
+		    		request.getSession().setAttribute("id", student.getSlogin_id());
 		    		currentQuestion=student.getQuestion();
 		    		currentAnswer=student.getAnswer();
 		    		System.out.println(currentAnswer);

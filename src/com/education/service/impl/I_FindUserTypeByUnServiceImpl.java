@@ -1,7 +1,8 @@
-package com.education.service;
+package com.education.service.impl;
 
 import java.util.List;
 
+import com.education.service.I_FindUserTypeByUsernameService;
 import org.junit.Test;
 
 import com.education.dao.impl.I_FindAdmintorDaoImpl;
