@@ -37,6 +37,7 @@
 	</script>
 </head>
 <body>
+
 <div class="d1">
 <form action=""  method="post">
 <input name="image" type="image" src="" width="400" height="100">
